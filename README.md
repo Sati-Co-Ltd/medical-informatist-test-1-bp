@@ -31,7 +31,7 @@ We ensure that [all data](./data/bp_text.json) are only the values of blood pres
 
 | encounterId | rawInput     | systolicBP | diastolicBP |
 | ----------- | ------------ | ---------- | ----------- |
-| example1    | 120 80       | 120        | 80          |
+| example1    | 12080        | 120        | 80          |
 | example2    | 194/112 mmHg | 194        | 112         |
 | example2    | BP = 94;62   | 94         | 62          |
 
@@ -40,7 +40,7 @@ We ensure that [all data](./data/bp_text.json) are only the values of blood pres
 | encounterId | rawInput | systolicBP | diastolicBP | reason                       |
 | ----------- | -------- | ---------- | ----------- | ---------------------------- |
 | example3    | 123      |            |             | one value of BP              |
-| example3    | 90/36.5  | 90         | 12        | DBP: lower than normal range |
+| example3    | 90/12    | 90         | 12          | DBP: lower than normal range |
 | example3    | ล้อนั่ง     |            |             | non-numeric value            |
 
 You can design the label of reason by yourself.  
