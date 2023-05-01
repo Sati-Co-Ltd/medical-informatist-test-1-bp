@@ -1,5 +1,14 @@
 # Medical Informatician Test: Blood pressure extraction
 
+## Prerequisite
+
+1. Challenge (1/3)
+   1. We prefer python. But if you have better approach, you can show it to us.
+   2. Explain the code
+2. Challenge (3/3)
+   1. Use any programming language
+   2. Separate github repo from other challenges
+
 ## Preface
 
 Most hospitals store thier past medical records in image of scanned paper. That results in difficulty to query information.
@@ -10,26 +19,28 @@ However, the extracted data are free text, consisting of misspelling due to dirt
 
 ## Your challenge (1/3)
 
-You receive the extracted text from blood pressure-recording fields from Adult out-patient department in [data/bp.json](data/bp.json). Now, you have to:  
+You receive the extracted text from blood pressure-recording fields from Adult out-patient department in [data/bp_text.json](./data/bp_text.json). Now, you have to:  
 
 1. Extract the systolic and diastolic blood pressure into numeric format and save into TSV file as [table 1](#table-1).
 2. Separate the abnormal values or unextractable rows into another TSV as [table 2](#table-2).
-3. Put your code and result into your github and send the link to email [contact@sati.co.th](mailto:contact@sati.co.th).
+3. Put your code or your notebook and result into your github and send the **link** to email [contact@sati.co.th](mailto:contact@sati.co.th).
+
+We ensure that [all data](./data/bp_text.json) are only the values of blood pressure, and not mixed with other fields.
 
 ### Table 1
 
 | encounterId | rawInput     | systolicBP | diastolicBP |
 | ----------- | ------------ | ---------- | ----------- |
-| example1    | 120/80       | 120        | 80          |
+| example1    | 120 80       | 120        | 80          |
 | example2    | 194/112 mmHg | 194        | 112         |
-| example2    | BP = 94/62   | 94         | 62          |
+| example2    | BP = 94;62   | 94         | 62          |
 
 ### Table 2
 
 | encounterId | rawInput | systolicBP | diastolicBP | reason                       |
 | ----------- | -------- | ---------- | ----------- | ---------------------------- |
 | example3    | 123      |            |             | one value of BP              |
-| example3    | 90/36.5  | 90         | 36.5        | DBP: lower than normal range |
+| example3    | 90/36.5  | 90         | 12        | DBP: lower than normal range |
 | example3    | ล้อนั่ง     |            |             | non-numeric value            |
 
 You can design the label of reason by yourself.  
